@@ -33,6 +33,6 @@ THEN my trainer name and the selected pokemon on my team persist
 
 
 > Here's a small preview
-![Schedular mock-up](https://raw.githubusercontent.com/blah blah blah)
+![pokedex mock-up](https://raw.githubusercontent.com/VAalchemist/KLEC-search-inc/main/assets/images/pokedex%20stand%20in.jpg)
 
- `Give it a try` [here!](https://blah blah blah)
+ `Begin your journey` [here!](https://vaalchemist.github.io/KLEC-search-inc/)
