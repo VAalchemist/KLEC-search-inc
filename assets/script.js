@@ -19,9 +19,9 @@ navigator.geolocation.getCurrentPosition(function(pos){
     lat = pos.coords.latitude;
     long = pos.coords.longitude;
 
-    //use the lat and long variables to create a url to use the openweather API and fetching
-    var requestWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appid=" + weatherAPI;
-    fetch(requestWeatherUrl)
+    //use the lat and long variables to create a url to use the weather API and fetching
+    var requestWeatherGridUrl = "https://api.weather.gov/points/" + lat + "," + long;
+    fetch(requestWeatherGridUrl)
     //formatting the reponse from the weather API into json format
     .then(function(response){
         return response.json();
@@ -29,14 +29,42 @@ navigator.geolocation.getCurrentPosition(function(pos){
     })
     //setting the json respone into a data object to use its properties
     .then(function(data){
-        //clearing out any previous content that may be in the weatherDisplay area of html
-        weatherDisplayEl.textContent = "";
-        //creating a new 'p' element to house the weather info
-        var weather = document.createElement('p');
-        //setting the weather content to be in the 'p' element created above
-        weather.textContent = "The Weather in " + data.name + " is " + data.weather[0].main;
-        //appending the content 'p' element to the weatherDisplay element in the html
-        weatherDisplayEl.append(weather);
+        console.log(data);
+        console.log(data.properties.gridX);
+        console.log(data.properties.gridY);
+        console.log(data.properties.relativeLocation.properties.city);
+        console.log(data.properties.gridId);
+
+        //assign grid values to use in API call
+        var gridX = data.properties.gridX;
+        var gridY = data.properties.gridY;
+        var gridLocation = data.properties.gridId;
+
+        //set up URL string for API call
+        var requestWeatherForecastUrl = "https://api.weather.gov/gridpoints/" + gridLocation + "/" + gridX + "," + gridY + "/forecast";
+        console.log(requestWeatherForecastUrl);
+
+        fetch(requestWeatherForecastUrl).then(function (weatherResponse){
+            return weatherResponse.json();
+        }).then(function(weatherData){
+            console.log(weatherData);
+            console.log(weatherData.properties.periods[0].shortForecast);
+
+
+            //clearing out any previous content that may be in the weatherDisplay area of html
+            weatherDisplayEl.textContent = "";
+            //creating a new 'p' element to house the weather info
+            var weather = document.createElement('p');
+            //setting the weather content to be in the 'p' element created above
+            weather.textContent = "The Weather in " + data.properties.relativeLocation.properties.city + " is " + weatherData.properties.periods[0].shortForecast;
+            //appending the content 'p' element to the weatherDisplay element in the html
+            weatherDisplayEl.append(weather);
+
+
+        }).catch(function(weatherError) {
+            console.log(weatherError);
+        });
+
 
 
     })
