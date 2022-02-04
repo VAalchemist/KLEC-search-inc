@@ -5,8 +5,8 @@ var weatherDisplayEl = document.querySelector(".weather-display");
 var lat;
 var long;
 //change config.weatherKey to personal open weather API key to get it to work
-var weatherAPI = config.weatherKey;
-
+//var weatherAPI = config.weatherKey;
+var weatherAPI = "2f0aa3eeabaa9f5d0f299426c008697b";
 
 //get geo location of user
 navigator.geolocation.getCurrentPosition(function(pos){  
@@ -160,7 +160,65 @@ formEl.addEventListener('submit', function (event) {
 
 });
 
+var teamArr = [];
+var team = document.querySelector(".team");
+var storedTeam = localStorage.getItem('team');
 
+
+if (storedTeam != null) {
+    teamArr = storedTeam.split(",")
+} 
+function deleteFromTeam(key) {
+    // removing item from array by one
+    teamArr.splice(Number(key),1);
+    
+    updateTeam();
+
+
+}
+addB = document.querySelector(".addBtn")
+
+function updateTeam() {
+    team.innerHTML = "";
+    for (const key in teamArr) {
+        var teamName = document.createElement("li");
+        var deleteBtn = document.createElement("button")
+        // var teamImg = document.createElement("img");
+        deleteBtn.addEventListener("click", e => {
+            var el = e.target;
+            if (el.classList.contains("delete")) {
+                deleteFromTeam(el.getAttribute("key"));
+            }
+        })
+    
+        teamName.textContent = teamArr[key];
+        deleteBtn.textContent = "delete";
+        deleteBtn.setAttribute("key", key);
+        deleteBtn.classList.add("delete");
+    
+        teamName.appendChild(deleteBtn);
+        team.appendChild(teamName);
+        // team.appendChild(teamImg);
+    }
+    localStorage.setItem('team', teamArr);
+    if (teamArr == "") {
+        localStorage.removeItem("team");
+    }
+}
+
+updateTeam()
+
+addB.addEventListener('click', function (event) {
+    
+    var name = document.querySelector("h2")
+    // var teamImg = document.querySelector("img");
+    
+    teamArr.push(name.textContent,);
+    console.log(team)
+    
+    updateTeam()
+    
+});
 
 // This is a way to get an array of objects of the first 151 pokemon with their name and their type
 // var pokemonArr = [];
