@@ -10,17 +10,22 @@ body {
   margin: 0;
 }
 
-.navContainer {
+.navContainer, .pokemon-display {
   min-height: 100%;
   font-family: 'Slackey', cursive;
   color: rgb(73, 156, 224);
 }
 
-.innerContainer {
+.innerContainer, .weather-display {
   padding: 20px;
   padding-bottom: 50px;
   font-family: 'Share Tech Mono', monospace;
   color: rgb(87, 184, 119);
+}
+
+.team-display {
+  font-family: 'Share Tech Mono', monospace;
+  color: rgb(243, 171, 77);
 }
 
  /* .searchBar::before {
