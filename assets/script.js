@@ -4,8 +4,11 @@ var displayEl = document.querySelector(".pokemon-display");
 var weatherDisplayEl = document.querySelector(".weather-display");
 var lat;
 var long;
-var weatherAPI = config.weatherKey;
+//change config.weatherKey to personal open weather API key to get it to work
+//var weatherAPI = config.weatherKey;
+var weatherAPI = "2f0aa3eeabaa9f5d0f299426c008697b";
 
+//get geo location of user
 navigator.geolocation.getCurrentPosition(function(pos){  
     console.log(pos.coords.latitude);
     console.log(pos.coords.longitude);
@@ -90,7 +93,72 @@ formEl.addEventListener('submit', function (event) {
         })
 
 });
+// creating a value of the team with teamArr
+var teamArr = [];
+var team = document.querySelector(".team");
+var storedTeam = localStorage.getItem('team');
 
+
+if (storedTeam != null) {
+ // changing the value of teamArr in to a string
+    teamArr = JSON.parse(storedTeam);
+} 
+function deleteFromTeam(key) {
+    // removing item from array by one
+    teamArr.splice(Number(key),1);
+    
+    updateTeam();
+
+51
+}
+addB = document.querySelector(".addBtn")
+
+function updateTeam() {
+    team.innerHTML = "";
+    
+    for (const key of teamArr) {
+        
+        var teamName = document.createElement("li");
+        var deleteBtn = document.createElement("button")
+        var teamImg = document.createElement("img");
+        teamImg.src = key[1];
+       
+        deleteBtn.addEventListener("click", e => {
+            var el = e.target;
+            if (el.classList.contains("delete")) {
+                deleteFromTeam(el.getAttribute("key"));
+            }
+        })
+
+        teamName.textContent = key[0];
+        deleteBtn.textContent = "delete";
+        deleteBtn.setAttribute("key", key[0]);
+        deleteBtn.classList.add("delete");
+    
+        teamName.appendChild(deleteBtn);
+        team.appendChild(teamName);
+        team.appendChild(teamImg);
+    }
+    localStorage.setItem('team', JSON.stringify(teamArr));
+    if (teamArr == "") {
+        localStorage.removeItem("team");
+    }
+}
+
+updateTeam()
+
+addB.addEventListener('click', function (event) {
+    event.preventDefault();
+    var name = document.querySelector("h2")
+    var teamImg = document.querySelector("img").src;
+    
+    teamArr.push([name.textContent, teamImg]);
+    
+    updateTeam()
+
+});
+
+// This is a way to get an array of objects of the first 151 pokemon with their name and their type
 // var pokemonArr = [];
 // for (var i = 1; i <=151;i++){
 

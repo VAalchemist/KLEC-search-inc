@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KLEC Pokedex</title>
-    <!-- PUT OUR CSS API PATH HERE -->
+<html lang="en">
 
-    <!-- icon for search bar -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLEC Pokedex</title>
+
+    <!-- Tailwind API -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 
     <!-- Font One -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,70 +20,104 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
 
-    <!-- Style Sheet -->
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- Style Sheet & CSS API-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 </head>
 
-<body>
+<body class="bg-white h-screen flex justify-center items-center">
 
-    <header>
-        <nav class="navContainer">
-          <p>Navigation Container</p>
-            <div class="innerContainer">
-               <p>Inner Container</p>
-                <!-- NAVIGATION BAR -->
-                
-                <!-- <a href="#">PokeList</a>
-                <a href="#">Your Party</a>
-                <a href="#">Meet KLEC</a> -->
-                
+    <main class="w-2/3 h-2/3 flex flex-col bg-red-700 shadow-xl rounded-lg overflow-hidden">
+        <header class="bg-red-700 px-6 py-4 ">
+            <h1 class="text-xs text-yellow-300 font-bold uppercase">KLEC-pokedex</h1>
+
+            <div class="flex items-center pt-3">
+                <div
+                    class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">
+                    <div class="border-2 w-6 h-6 border-blue-200 rounded-full"></div>
+                </div>
+
+                <!-- NAVIGATION BAR? -->
+
+
+                <nav class="navContainer">
+                    <div class="ml-4">
+                        <p class="font-bold">LINK?</p>
+                    </div>
+
+                    <div class="innerContainer">
+                        <p class="text-sm ml-4 mt-1">LINK?</p>
+                    </div>
+                </nav>
+                <!--<a href="#">PokeList</a>
+                    <a href="#">Your Party</a>
+                    <a href="#">Meet KLEC</a> -->
+
                 <!-- SEARCH BAR -->
 
-                <!-- <p class="searchBar"></p>
-                <input type="text" placeholder="Search..">
-                </ul> -->
-            </div>
-           
-              
-        </nav>
-    </header>
+                <!--<ul>
+                        <p class="searchBar"></p>
+                        <input type="text" placeholder="Search..">
+                    </ul> -->
 
-    <main class="">
+            </div>
+        </header>
+
+        <section class="px-6 py-4 border-t border-red-900">
+            <div class="rounded-lg p-4 bg-gray-800 text-green-400 ">List the current search here</div>
+
+        </section>
+
+
+        <div class="bg-red-700 border-t border-red-900 text-gray-400 text-lg px-6 py-4 rounded-t">something else can go
+            here
+            <div>
+                <section class="weather-display"></section>
+            </div>
+        </div>
+
         <div>
-            <form class="pokemon">
+            <form class="pokemon flex justify-center items-center px-6 py-4">
                 <input class="poke-name" placeholder="enter pokemon here"></input>
                 <button type="submit" class="btn btn-primary">Search</button>
-    
+                <button type="add" class="addBtn border ml-4 px-2 py-1">add</button>
+
             </form>
         </div>
-        <section class="pokemon-display">
-        
+
+        <section class="pokemon-display"></section>
+
+        <section class="flex justify-between items-center px-6 py-4">
+            <div
+                class="bg-green-600 shadow-xl text-xs uppercase px-2 py-1 rounded-full border border-red-900 text-gray-800 font-bold">
+                My Team</div>
+            <div class="text-sm">May, 14, 1988</div>
         </section>
+
+        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE POKEMON LIST</section>
+
+        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE TEAM
+            <div class="team-display">Team
+                <ol class="team"></ol>
+            </div>
+        </section>
+
+        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE CONTACT LIST</section>
+
+        <footer class="flex justify-between items-center px-6 py-4">
+            <h2 class="">Made with 🦾</i>️</h2>
+            <div>
+                <p class="">
+                    &copy; 2022 KLEC, Inc.
+                </p>
+            </div>
+        </footer>
     </main>
-
-    <section>
-        <div>
-            <section class="weather-display">
-
-            </section>
-        </div>
-    </section>
-
-    <footer>
-        <h2>Made with 🦾</i>️</h2>
-        <div>
-            <p>
-                &copy; 2022 KLEC, Inc.
-            </p>
-        </div>        
-    </footer>
-
-
-
 
 
     <!-- PUT OUR JQUERY/AJAX API PATH HERE -->
     <script type='text/javascript' src='./assets/config.js'></script>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
