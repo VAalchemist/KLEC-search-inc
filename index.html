@@ -59,6 +59,7 @@
     
     <main class="poke-font2 flex flex-col bg-red-700">
     
+        <!-- searched pokemon and weather display -->
         <section class="flex px-6 py-4 border-t border-red-900">
             <div class="flex flex-col items-center w-full h-80 border-8 rounded-lg bg-gray-800 text-green-400">
                 <div class="flex items-center h-full">
@@ -67,10 +68,9 @@
     
                 <div class="flex items-center h-full weather-display"></div>
             </div>
-    
-    
         </section>
     
+        <!-- search bar add button -->
         <div>
             <form class="pokemon flex justify-center items-center px-6 py-4">
                 <input class="poke-name" placeholder="enter pokemon here"></input>
@@ -84,24 +84,20 @@
                         <div class="absolute flex mb-1 text-gray-500 text-xs uppercase">add</div>
                     </div>
                 </button>
-    
             </form>
         </div>
     
      
-    
+         <!-- team list -->
         <section class="flex justify-center items-center px-6 py-4">
-            <div>
-                THIS SECTION CAN BE THE POKEMON LIST
-            </div>
+            <div class="flex flex-col justify-center items-center">
+                <div class="flex flex-col team-display">
+                    <ol class="team"></ol>
+                </div>
+            </div>  
         </section>
     
-        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE TEAM
-            <div class="team-display">
-                <ol class="team"></ol>
-            </div>
-        </section>
-    
+        <!-- contact list -->
         <section class="flex justify-center items-center px-6 py-4">
             <div>
                 THIS SECTION CAN BE THE CONTACT LIST
