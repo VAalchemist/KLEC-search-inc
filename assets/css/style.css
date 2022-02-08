@@ -13,3 +13,7 @@
   font-family: 'Londrina Shadow', cursive;
   color: rgb(87, 184, 119);
 }
+
+.delete {
+  color:aquamarine;
+  padding: 5px;

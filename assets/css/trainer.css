@@ -1,0 +1,17 @@
+body { 
+    background-image: url("../images/Pokemon-The-Most-Intense-Moment-Of-Your-Childhood-Now-In-3D-.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    
+}
+
+.center {
+  display: block;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 40%;
+}

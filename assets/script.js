@@ -67,11 +67,11 @@ formEl.addEventListener('submit', function (event) {
             console.log(data.height);
             console.log(data.weight);
             console.log(data.sprites.front_default);
-
             var name = document.createElement("h2");
             name.textContent=data.name;
             var img = document.createElement("img");
-            img.setAttribute("src",data.sprites.front_default);
+            img.setAttribute("src",data.sprites.versions["generation-v"]["black-white"].animated.front_default);
+            // img.setAttribute("src",data.sprites.front_default);
             var height = document.createElement("p");
             height.textContent = "Height: " + data.height;
             var weight = document.createElement("p");
@@ -97,6 +97,18 @@ formEl.addEventListener('submit', function (event) {
 var teamArr = [];
 var team = document.querySelector(".team");
 var storedTeam = localStorage.getItem('team');
+// check if pokemonCount in local storage is empty
+if (JSON.parse(localStorage.getItem("team")) === null) {
+    var pokemonCount = 1;
+} else {
+    var pokemonCount = JSON.parse(localStorage.getItem("team")).length;
+} 
+console.log(pokemonCount)
+// // console.log("your team is " + pokemonCount);
+
+// if(pokemonCount.length >=6){
+//     this.setState({isFull: true});
+// } 
 
 
 if (storedTeam != null) {
@@ -105,6 +117,7 @@ if (storedTeam != null) {
 } 
 function deleteFromTeam(key) {
     // removing item from array by one
+    //pokemonCounter--;
     teamArr.splice(Number(key),1);
     
     updateTeam();
@@ -149,12 +162,28 @@ updateTeam()
 
 addB.addEventListener('click', function (event) {
     event.preventDefault();
-    var name = document.querySelector("h2")
-    var teamImg = document.querySelector("img").src;
+    //if (pokemonCount <=6)
+    pokemonCounter++;
+   // else error message
+    var teamLimit = 6;
+    var exceedsLimit = false;
+    console.log(pokemonCount >= teamLimit);
+    if (pokemonCount >= teamLimit){
+        exceedsLimit = true;
+        console.log("limit exceeded")
+        return 0
+    } else {
+        var name = document.querySelector("h2")
+        var teamImg = document.querySelector("img").src;
     
-    teamArr.push([name.textContent, teamImg]);
+        teamArr.push([name.textContent, teamImg]);
     
-    updateTeam()
+        updateTeam()
+    }
+    
+    
+
+    
 
 });
 
