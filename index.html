@@ -20,10 +20,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 </head>
 
-<body class="bg-white flex flex-col items-center">
-    <header class="w-2/3 h-2/3 bg-red-700 px-6 py-4 rounded-t-lg ">
+<body class="bg-gray-300 h-screen flex justify-center mt-16">
+<div class="w-2/3 h-2/3 flex flex-col bg-red-700 shadow-2xl rounded-lg">
+
+
+    <header class=" bg-red-700 px-6 py-4 rounded-t-lg shadow-2xl mt-8 ">
         <h1 class="text-xs text-yellow-300 font-bold uppercase">KLEC-pokedex</h1>
-   
+    
         <div class="flex items-center pt-3">
             <div class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">
                 <div class="border-2 w-6 h-6 border-blue-200 rounded-full"></div>
@@ -34,73 +37,82 @@
     
             <nav class="">
                 <section class="flex items-center px-6 py-4">
-                    <div class="bg-green-600 shadow-xl text-xs uppercase px-2 py-1 rounded-full border border-red-900 text-gray-800 font-bold">My Team</div>
+                    <div
+                        class="bg-green-600 shadow-xl text-xs uppercase px-2 py-1 rounded-full border border-red-900 text-gray-800 font-bold">
+                        My Team</div>
                 </section>
     
-        
+    
             </nav>
             <!--<a href="#">PokeList</a>
-                        <a href="#">Your Party</a>
-                        <a href="#">Meet KLEC</a> -->
+                            <a href="#">Your Party</a>
+                            <a href="#">Meet KLEC</a> -->
     
             <!-- SEARCH BAR -->
     
             <!--<ul>
-                            <p class="searchBar"></p>
-                            <input type="text" placeholder="Search..">
-                        </ul> -->
+                                <p class="searchBar"></p>
+                                <input type="text" placeholder="Search..">
+                            </ul> -->
     
         </div>
     </header>
-
-    <main class="w-2/3 h-2/3 flex flex-col bg-red-700">
-
+    
+    <main class="flex flex-col bg-red-700">
+    
         <section class="px-6 py-4 border-t border-red-900">
             <div class="w-full h-80 border-8 rounded-lg bg-gray-800 text-green-400">
                 <div class=" p-4 h-full">Display the current search here</div>
-
+    
                 <div>
                     <section class="weather-display"></section>
                 </div>
-
+    
             </div>
-           
-
+    
+    
         </section>
-
+    
         <div>
             <form class="pokemon flex justify-center items-center px-6 py-4">
                 <input class="poke-name" placeholder="enter pokemon here"></input>
-                <button type="submit" class="btn btn-primary">Search</button>
-                <button type="add" class="addBtn border ml-4 px-2 py-1">add</button>
 
+                <button type="submit" class="btn btn-primary">Search</button>
+
+                <button type="add" class="addBtn text-black ml-4 px-2 py-1 hover:text-gray-900 ">
+                    <div class="relative flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3em" height="3em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"> <path d="M30 4H18v14H4v12h14v14h12V30h14V18H30V4z"stroke="currentColor" stroke-width="4" stroke-linejoin="round" fill="black">
+                        </svg>
+                        <div class="absolute flex mb-1 text-gray-500 text-xs uppercase">add</div>
+                    </div>
+                </button>
+    
             </form>
         </div>
-
+    
         <section class="pokemon-display"></section>
-
+    
         <section class="flex justify-center items-center px-6 py-4">
             <div>
-                THIS SECTION CAN BE THE POKEMON LIST    
+                THIS SECTION CAN BE THE POKEMON LIST
             </div>
         </section>
-
-        <section class="flex justify-center items-center px-6 py-4"
-            >THIS SECTION CAN BE THE TEAM
+    
+        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE TEAM
             <div class="team-display">
                 <ol class="team"></ol>
             </div>
         </section>
-
+    
         <section class="flex justify-center items-center px-6 py-4">
             <div>
                 THIS SECTION CAN BE THE CONTACT LIST
             </div>
         </section>
     </main>
-
-
-    <footer class="w-2/3 bg-red-700 shadow-xl rounded-b-lg flex justify-between items-center px-6 py-4 sm:p-8">
+    
+    <!-- FOOTER -->
+    <footer class=" bg-red-700 shadow-2xl rounded-b-lg flex justify-between px-6 py-4">
         <h2 class="poke-font2 text-sm text-gray-200 font-light">Made with 🦾</i>️</h2>
         <div>
             <p class="poke-font2 text-sm text-gray-200 font-light">
@@ -109,7 +121,7 @@
         </div>
     </footer>
 
-
+</div>
     <!-- PUT OUR JQUERY/AJAX API PATH HERE -->
     <script type='text/javascript' src='./assets/config.js'></script>
     <script src="./assets/script.js"></script>
