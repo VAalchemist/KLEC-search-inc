@@ -10,71 +10,63 @@
     <!-- Tailwind API -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 
-    <!-- Font One -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
-
-    <!-- Font Two -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Share+Tech+Mono&family=Stalinist+One&display=swap" rel="stylesheet">
 
     <!-- Style Sheet & CSS API-->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 </head>
 
-<body class="bg-white h-screen flex justify-center items-center">
-
-    <main class="w-2/3 h-2/3 flex flex-col bg-red-700 shadow-xl rounded-lg overflow-hidden">
-        <header class="bg-red-700 px-6 py-4 ">
-            <h1 class="text-xs text-yellow-300 font-bold uppercase">KLEC-pokedex</h1>
-
-            <div class="flex items-center pt-3">
-                <div
-                    class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">
-                    <div class="border-2 w-6 h-6 border-blue-200 rounded-full"></div>
-                </div>
-
-                <!-- NAVIGATION BAR? -->
-
-
-                <nav class="navContainer">
-                    <div class="ml-4">
-                        <p class="font-bold">LINK?</p>
-                    </div>
-
-                    <div class="innerContainer">
-                        <p class="text-sm ml-4 mt-1">LINK?</p>
-                    </div>
-                </nav>
-                <!--<a href="#">PokeList</a>
-                    <a href="#">Your Party</a>
-                    <a href="#">Meet KLEC</a> -->
-
-                <!-- SEARCH BAR -->
-
-                <!--<ul>
-                        <p class="searchBar"></p>
-                        <input type="text" placeholder="Search..">
-                    </ul> -->
-
+<body class="bg-white flex flex-col items-center">
+    <header class="w-2/3 h-2/3 bg-red-700 px-6 py-4 rounded-t-lg ">
+        <h1 class="text-xs text-yellow-300 font-bold uppercase">KLEC-pokedex</h1>
+   
+        <div class="flex items-center pt-3">
+            <div class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">
+                <div class="border-2 w-6 h-6 border-blue-200 rounded-full"></div>
             </div>
-        </header>
+    
+            <!-- NAVIGATION BAR? -->
+    
+    
+            <nav class="">
+                <section class="flex items-center px-6 py-4">
+                    <div class="bg-green-600 shadow-xl text-xs uppercase px-2 py-1 rounded-full border border-red-900 text-gray-800 font-bold">My Team</div>
+                </section>
+    
+        
+            </nav>
+            <!--<a href="#">PokeList</a>
+                        <a href="#">Your Party</a>
+                        <a href="#">Meet KLEC</a> -->
+    
+            <!-- SEARCH BAR -->
+    
+            <!--<ul>
+                            <p class="searchBar"></p>
+                            <input type="text" placeholder="Search..">
+                        </ul> -->
+    
+        </div>
+    </header>
+
+    <main class="w-2/3 h-2/3 flex flex-col bg-red-700">
 
         <section class="px-6 py-4 border-t border-red-900">
-            <div class="rounded-lg p-4 bg-gray-800 text-green-400 ">List the current search here</div>
+            <div class="w-full h-80 border-8 rounded-lg bg-gray-800 text-green-400">
+                <div class=" p-4 h-full">Display the current search here</div>
+
+                <div>
+                    <section class="weather-display"></section>
+                </div>
+
+            </div>
+           
 
         </section>
-
-
-        <div class="bg-red-700 border-t border-red-900 text-gray-400 text-lg px-6 py-4 rounded-t">something else can go
-            here
-            <div>
-                <section class="weather-display"></section>
-            </div>
-        </div>
 
         <div>
             <form class="pokemon flex justify-center items-center px-6 py-4">
@@ -87,32 +79,35 @@
 
         <section class="pokemon-display"></section>
 
-        <section class="flex justify-between items-center px-6 py-4">
-            <div
-                class="bg-green-600 shadow-xl text-xs uppercase px-2 py-1 rounded-full border border-red-900 text-gray-800 font-bold">
-                My Team</div>
-            <div class="text-sm">May, 14, 1988</div>
+        <section class="flex justify-center items-center px-6 py-4">
+            <div>
+                THIS SECTION CAN BE THE POKEMON LIST    
+            </div>
         </section>
 
-        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE POKEMON LIST</section>
-
-        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE TEAM
-            <div class="team-display">Team
+        <section class="flex justify-center items-center px-6 py-4"
+            >THIS SECTION CAN BE THE TEAM
+            <div class="team-display">
                 <ol class="team"></ol>
             </div>
         </section>
 
-        <section class="flex justify-center items-center px-6 py-4">THIS SECTION CAN BE THE CONTACT LIST</section>
-
-        <footer class="flex justify-between items-center px-6 py-4">
-            <h2 class="">Made with 🦾</i>️</h2>
+        <section class="flex justify-center items-center px-6 py-4">
             <div>
-                <p class="">
-                    &copy; 2022 KLEC, Inc.
-                </p>
+                THIS SECTION CAN BE THE CONTACT LIST
             </div>
-        </footer>
+        </section>
     </main>
+
+
+    <footer class="w-2/3 bg-red-700 shadow-xl rounded-b-lg flex justify-between items-center px-6 py-4">
+        <h2 class="poke-font2 text-sm text-gray-200 font-light">Made with 🦾</i>️</h2>
+        <div>
+            <p class="poke-font2 text-sm text-gray-200 font-light">
+                &copy; 2022 KLEC, Inc.
+            </p>
+        </div>
+    </footer>
 
 
     <!-- PUT OUR JQUERY/AJAX API PATH HERE -->

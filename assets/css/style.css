@@ -1,28 +1,15 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-/* 
-.navContainer {
-  font-family: 'Slackey', cursive;
+
+.poke-font1 {
+  font-family: 'Stalinist One', cursive;
   color: rgb(73, 156, 224);
 }
 
-.innerContainer {
+.poke-font2 {
   font-family: 'Share Tech Mono', monospace;
   color: rgb(87, 184, 119);
-} */
-
-/* footer {
-  background: #350108;
-  color: rgb(243, 171, 77);
 }
 
-footer h2 {
-  font-family: 'Slackey', cursive;
+.poke-font3 {
+  font-family: 'Londrina Shadow', cursive;
+  color: rgb(87, 184, 119);
 }
-
-footer div {
-  font-family: 'Share Tech Mono', monospace;
-} */
