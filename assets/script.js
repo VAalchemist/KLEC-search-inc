@@ -61,29 +61,47 @@ formEl.addEventListener('submit', function (event) {
             return response.json();
         })
         .then(function (data) {
-            displayEl.textContent = "";
-            console.log(data);
-            console.log(data.name);
-            console.log(data.height);
-            console.log(data.weight);
-            console.log(data.sprites.front_default);
-            var name = document.createElement("h2");
-            name.textContent=data.name;
-            var img = document.createElement("img");
-            img.setAttribute("src",data.sprites.versions["generation-v"]["black-white"].animated.front_default);
-            // img.setAttribute("src",data.sprites.front_default);
-            var height = document.createElement("p");
-            height.textContent = "Height: " + data.height;
-            var weight = document.createElement("p");
-            weight.textContent = "Weight: " + data.weight;
-            var type = document.createElement("p");
-            type.textContent = "Type: " + data.types[0].type.name;
 
-            displayEl.append(name);
-            displayEl.append(img);
-            displayEl.append(height);
-            displayEl.append(weight);
-            displayEl.append(type);
+            //only allows the first 151 pokemon
+            if(data.id>151){
+                displayEl.textContent = "";
+                var errorMessage = document.createElement('p');
+                errorMessage.textContent = "Please enter only GEN 1 pokemon";
+                displayEl.append(errorMessage);
+
+
+            }
+
+            else {
+                displayEl.textContent = "";
+                console.log(data);
+                console.log(data.name);
+                console.log(data.height);
+                console.log(data.weight);
+                console.log(data.sprites.front_default);
+    
+                var name = document.createElement("h2");
+                name.textContent=data.name;
+                var img = document.createElement("img");
+                img.setAttribute("src",data.sprites.versions["generation-v"]["black-white"].animated.front_default);
+                console.log(data.sprites.versions["generation-v"]["black-white"].animated.front_default);
+                var height = document.createElement("p");
+                height.textContent = "Height: " + data.height;
+                var weight = document.createElement("p");
+                weight.textContent = "Weight: " + data.weight;
+                var type = document.createElement("p");
+                type.textContent = "Type: " + data.types[0].type.name;
+    
+                displayEl.append(name);
+                displayEl.append(img);
+                displayEl.append(height);
+                displayEl.append(weight);
+                displayEl.append(type);
+
+
+
+            }
+
 
 
         })
@@ -109,6 +127,7 @@ console.log(pokemonCount)
 // if(pokemonCount.length >=6){
 //     this.setState({isFull: true});
 // } 
+
 
 
 if (storedTeam != null) {
