@@ -2,6 +2,7 @@ var searchEl = document.querySelector(".poke-name");
 var formEl = document.querySelector(".pokemon");
 var displayEl = document.querySelector(".pokemon-display");
 var weatherDisplayEl = document.querySelector(".weather-display");
+
 var lat;
 var long;
 //change config.weatherKey to personal open weather API key to get it to work
@@ -68,6 +69,7 @@ navigator.geolocation.getCurrentPosition(function(pos){
     });
 
 });
+
 
 //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 
@@ -231,12 +233,9 @@ addB.addEventListener('click', function (event) {
     
         updateTeam()
     }
-    
-    
-
-    
 
 });
+
 
 // This is a way to get an array of objects of the first 151 pokemon with their name and their type
 // var pokemonArr = [];
