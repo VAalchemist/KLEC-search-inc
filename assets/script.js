@@ -272,8 +272,11 @@ addB.addEventListener('click', function (event) {
         exceedsLimit = true;
         console.log("limit exceeded")
         return 0
-    } else {
-        pokemonCount++;
+    } 
+
+    
+    else {
+        
         var name = document.querySelector("h2")
         var teamImg = document.querySelector("img").src;
     
@@ -284,7 +287,9 @@ addB.addEventListener('click', function (event) {
 
 });
 
-
+//retrieve trainername from local storage and print on screen
+var trainer = JSON.parse(localStorage.getItem('train'));
+document.querySelector('.trainerName').innerHTML = trainer + "'s " + "pokedex";
 // This is a way to get an array of objects of the first 151 pokemon with their name and their type
 // var pokemonArr = [];
 // for (var i = 1; i <=151;i++){
