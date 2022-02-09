@@ -15,32 +15,59 @@ navigator.geolocation.getCurrentPosition(function(pos){
     lat = pos.coords.latitude;
     long = pos.coords.longitude;
 
+        //use the lat and long variables to create a url to use the weather API and fetching
+        var requestWeatherGridUrl = "https://api.weather.gov/points/" + lat + "," + long;
+        fetch(requestWeatherGridUrl)
 
-    var requestWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appid=" + weatherAPI;
-    fetch(requestWeatherUrl)
     .then(function(response){
         return response.json();
 
     })
     .then(function(data){
-        weatherDisplayEl.textContent = "";
-        var weather = document.createElement('p');
-        weather.textContent = "The Weather in " + data.name + " is " + data.weather[0].main;
-        weatherDisplayEl.append(weather);
+        console.log(data);
+        console.log(data.properties.gridX);
+        console.log(data.properties.gridY);
+        console.log(data.properties.relativeLocation.properties.city);
+        console.log(data.properties.gridId);
+
+        //assign grid values to use in API call
+        var gridX = data.properties.gridX;
+        var gridY = data.properties.gridY;
+        var gridLocation = data.properties.gridId;
+
+        //set up URL string for API call
+        var requestWeatherForecastUrl = "https://api.weather.gov/gridpoints/" + gridLocation + "/" + gridX + "," + gridY + "/forecast";
+        console.log(requestWeatherForecastUrl);
+
+        fetch(requestWeatherForecastUrl)
+        
+        .then(function (weatherResponse){
+            return weatherResponse.json();
+
+        }).
+        then(function(weatherData){
+
+            console.log(weatherData);
+            console.log(weatherData.properties.periods[0].shortForecast);
 
 
-    })
-    .catch(function (error){
-        console.log(error);
+            //clearing out any previous content that may be in the weatherDisplay area of html
+            weatherDisplayEl.textContent = "";
+            //creating a new 'p' element to house the weather info
+            var weather = document.createElement('p');
+            //setting the weather content to be in the 'p' element created above
+            weather.textContent = "The Weather in " + data.properties.relativeLocation.properties.city + " is " + weatherData.properties.periods[0].shortForecast;
+            //appending the content 'p' element to the weatherDisplay element in the html
+            weatherDisplayEl.append(weather);
+
+
+        }).catch(function(weatherError) {
+            console.log(weatherError);
+        });
+
     });
 
-    }, function(){
-        console.log("enable location");
-        weatherDisplayEl.textContent = "";
-        var weather = document.createElement('p');
-        weather.textContent = "Please enable location services to experience the full pokemon experience";
-        weatherDisplayEl.append(weather);
-    });
+});
 
 //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 
@@ -117,11 +144,11 @@ var team = document.querySelector(".team");
 var storedTeam = localStorage.getItem('team');
 // check if pokemonCount in local storage is empty
 if (JSON.parse(localStorage.getItem("team")) === null) {
-    var pokemonCount = 1;
+    var pokemonCount = 0;
 } else {
     var pokemonCount = JSON.parse(localStorage.getItem("team")).length;
 } 
-console.log(pokemonCount)
+console.log(pokemonCount);
 // // console.log("your team is " + pokemonCount);
 
 // if(pokemonCount.length >=6){
@@ -161,6 +188,8 @@ function updateTeam() {
             var el = e.target;
             if (el.classList.contains("delete")) {
                 deleteFromTeam(el.getAttribute("key"));
+                pokemonCount--;
+                
             }
         })
 
@@ -184,7 +213,7 @@ updateTeam()
 addB.addEventListener('click', function (event) {
     event.preventDefault();
     //if (pokemonCount <=6)
-    // pokemonCounter++;
+
    // else error message
     var teamLimit = 6;
     var exceedsLimit = false;
@@ -194,6 +223,7 @@ addB.addEventListener('click', function (event) {
         console.log("limit exceeded")
         return 0
     } else {
+        pokemonCount++;
         var name = document.querySelector("h2")
         var teamImg = document.querySelector("img").src;
     
@@ -232,3 +262,4 @@ addB.addEventListener('click', function (event) {
 
 // }
 // console.log(pokemonArr);
+
