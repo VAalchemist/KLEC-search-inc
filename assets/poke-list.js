@@ -1,7 +1,5 @@
-console.log("new poke list");
-
 var pokeListEl = document.querySelector(".poke-list");
-
+var pokeMap = new Map();
 
 var pokeListURL = "https://pokeapi.co/api/v2/pokemon/?limit=151";
 fetch (pokeListURL)
@@ -28,6 +26,16 @@ fetch (pokeListURL)
         
         .then(function (pokeData){
 
+            if(pokeMap.has(pokeData.types[0].type.name)){  
+                pokeMap.set(pokeData.types[0].type.name, pokeMap.get(pokeData.types[0].type.name)+1)
+
+            }
+
+            else {
+                pokeMap.set(pokeData.types[0].type.name, 1 )
+
+            }
+
             var cardContainer = document.createElement("div");
             cardContainer.setAttribute("class", "mt-4 sm:px-4 lg:px-16");
             cardContainer.setAttribute("style", "width: 300px");
@@ -48,6 +56,7 @@ fetch (pokeListURL)
             contentContainer.append(title);
             cardContainer.append(contentContainer);
             pokeListEl.append(cardContainer);
+            console.log(pokeMap);
 
         })
         
