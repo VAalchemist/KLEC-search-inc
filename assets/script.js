@@ -6,7 +6,6 @@ var lat;
 var long;
 //change config.weatherKey to personal open weather API key to get it to work
 //var weatherAPI = config.weatherKey;
-var weatherAPI = "2f0aa3eeabaa9f5d0f299426c008697b";
 
 //get geo location of user
 navigator.geolocation.getCurrentPosition(function(pos){  
@@ -184,7 +183,7 @@ updateTeam()
 addB.addEventListener('click', function (event) {
     event.preventDefault();
     //if (pokemonCount <=6)
-    pokemonCounter++;
+    // pokemonCounter++;
    // else error message
     var teamLimit = 6;
     var exceedsLimit = false;
