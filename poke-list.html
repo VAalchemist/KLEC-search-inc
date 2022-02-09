@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poke List</title>
+    <title>Contact List</title>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,80 +36,42 @@
 
                 <nav class="flex ">
                     <div class="flex items-center px-6 py-4">
-                        <a href="#team"
-                            class="bg-red-600 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">team</a>
+                        <a href="index.html"
+                            class="bg-red-600 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">home</a>
 
                         <a href="poke-list.html"
                             class="bg-yellow-400 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">list</a>
 
-<main class="w-2/3 h-2/3 bg-red-700 px-6 py-4 rounded-lg mt-16 w-full flex flex-col items-center">
+                        <a href="contact-list.html"
+                            class="bg-green-600 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">klec</a>
+                    </div>
+                </nav>
+            </section>
+        </header>
 
-        <!--    START OF THE CARDS SECTION      -->
-    <section class="flex flex-col sm:flex-row sm:-mx-2 poke-list">
 
-            <!-- IMAGE CONTAINER -->
-        <div class="mt-4 sm:w-1/3 ">
-            <div class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
+<!-- POKEMON LIST HERE -->
+        <section class="poke-list flex justify-center md:flex-col sm:-mx-3">
 
-        <section class=" flex justify-center md:flex-col sm:flex-row sm:-mx-3">
             <!-- FIRST CARD TEMPLATE -->
             <div class="mt-4 sm:px-4 lg:px-16">
                 <div
                     class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
                     <!-- POKEMON IMAGE -->
                     <div class="bg-gray-200 text-green-700  w-16 rounded-full p-2">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
+                        <svg  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3em" height="3em"
+                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path
+                                d="M14.5 12a2.5 2.5 0 0 1-5 0a2.5 2.5 0 0 1 5 0zm7.5 0c0 5.52-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2s10 4.48 10 10zm-2 0h-4c0-2.21-1.79-4-4-4s-4 1.79-4 4H4c0 4.41 3.59 8 8 8s8-3.59 8-8z"
+                                fill="currentColor" />
+                        </svg>
                     </div>
                     <!-- CARD CONTENT  -->
-                    <p class="mt-4 font-bold">THINGS</p>
-                    <p class="text-center mt-2 text-gray-600 text-sm">STUFF </p>
+                    <p class="mt-4 font-bold">Pokemon List</p>
+                    <p class="text-center mt-2 text-gray-600 text-sm">Display only, go back to the home page to select your team! </p>
                 </div>
             </div>
 
-
-            <!-- SECOND CARD TEMPLATE -->
-            <div class="mt-4 sm:px-4 lg:px-16">
-                <div
-                    class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
-                    <!-- POKEMON IMAGE -->
-                    <div class="bg-gray-200 text-green-700  w-16 rounded-full p-2">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
-                    </div>
-                    <!-- CARD CONTENT  -->
-                    <p class="mt-4 font-bold">THINGS</p>
-                    <p class="text-center mt-2 text-gray-600 text-sm">STUFF </p>
-                </div>
-            </div>
-
-
-            <!-- THIRD CARD TEMPLATE -->
-            <div class="mt-4 sm:px-4 lg:px-16">
-                <div
-                    class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
-                    <!-- POKEMON IMAGE -->
-                    <div class="bg-gray-200 text-green-700  w-16 rounded-full p-2">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
-                    </div>
-                    <!-- CARD CONTENT  -->
-                    <p class="mt-4 font-bold">THINGS</p>
-                    <p class="text-center mt-2 text-gray-600 text-sm">STUFF </p>
-                </div>
-            </div>
-
-
-            <!-- FOURTH CARD TEMPLATE -->
-            <div class="mt-4 sm:px-4 lg:px-16">
-                <div
-                    class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
-                    <!-- POKEMON IMAGE -->
-                    <div class="bg-gray-200 text-green-700  w-16 rounded-full p-2">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
-                    </div>
-                    <!-- CARD CONTENT  -->
-                    <p class="mt-4 font-bold">THINGS</p>
-                    <p class="text-center mt-2 text-gray-600 text-sm">STUFF </p>
-                </div>
-            </div>
         </section>
 
         <!-- FOOTER -->
@@ -121,11 +83,10 @@
         </footer>
 
     </div>
-</main>
-<script src="./assets/poke-list.js"></script>
 
     <!-- PUT OUR JQUERY/AJAX API PATH HERE -->
     <script type='text/javascript' src='./assets/config.js'></script>
-    <script src="./assets/script.js"></script>
+    <script src="./assets/poke-list.js"></script>
 </body>
+
 </html>
