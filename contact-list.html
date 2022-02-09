@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke List</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Share+Tech+Mono&family=Stalinist+One&display=swap"
+        rel="stylesheet">
+
+    <!-- Style Sheet & CSS API-->
+    <!-- Tailwind API -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-blackwhite flex flex-col  items-center">
+<main class="w-2/3 h-2/3 bg-red-700 px-6 py-4 rounded-lg lg:mt-80 md:mt-64 w-full flex flex-col  items-center">
+
+    <header class="  px-6 py-4 rounded-t-lg   ">
+        <h1 class="text-sm text-yellow-300 poke-font3 uppercase">KLEC-pokedex</h1>
+        
+        <div class="flex justify-between items-center pt-3">
+            <div class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">
+                <div class="border-2 w-6 h-6 border-blue-300 rounded-full"></div>
+            </div>
+                <!-- NAVIGATION BAR? -->
+            <nav class="flex ">
+                <section class="flex items-center px-6 py-4">
+                  
+                    <a href="index.html" class="bg-red-600 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">home</a>
+        
+                    <a href="poke-list.html" class="bg-yellow-400 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">list</a>
+        
+                    <a href="#klec" class="bg-green-600 border border-red-900 w-8 h-8 mx-2 flex justify-center items-center rounded-full uppercase font-thin text-sm text-white poke-font2">klec</a>
+                </section>
+            </nav>
+        </div>
+    </header>
+
+        <!--    START OF THE CARDS SECTION      -->
+        <section class="flex flex-col sm:flex-row sm:-mx-2">
+
+            <!-- IMAGE CONTAINER -->
+            <div class="mt-4 sm:w-1/3">
+                <div
+                    class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
+
+                    <!-- POKEMON IMAGE -->
+                    <div class="bg-gray-200 text-green-700  w-16 rounded-full p-2">
+                        <img src="assets\images\pikachu.png" />
+                    </div>
+
+                    <!-- CARD CONTENT  -->
+                    <a href="#" class="mt-4 font-bold">Kevin Castillo</a>
+                </div>
+            </div>
+
+
+            <!-- IMAGE CONTAINER -->
+            <div class="mt-4 sm:w-1/3">
+                <div class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
+
+                    <!-- POKEMON IMAGE -->
+                    <div class="bg-gray-200 text-indigo-700 w-16 rounded-full p-2">
+                        <img src="assets\images\bulbasaur.png" />
+                    </div>
+
+                    <!-- CARD CONTENT  -->
+                    <a href="#" class="mt-4 font-bold">Arlo Garcia</a>
+                </div>
+            </div>
+
+
+            <!-- IMAGE CONTAINER -->
+            <div class="mt-4 sm:w-1/3">
+                <div class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
+            
+                    <!-- POKEMON IMAGE -->
+                    <div class="bg-gray-200 text-indigo-700 w-16 rounded-full p-2">
+                        <img src="assets\images\squirtle.png" />
+                    </div>
+            
+                    <!-- CARD CONTENT  -->
+                    <a href="#" class="mt-4 font-bold">Lanika Thomas</a>
+                </div>
+            </div>
+
+
+            <!-- IMAGE CONTAINER -->
+            <div class="mt-4 sm:w-1/3">
+                <div class="bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8">
+
+                    <!-- POKEMON IMAGE -->
+                    <div class="bg-gray-200 text-indigo-700 w-16 rounded-full p-2">
+                        <img src="assets\images\charmander.png" />
+                    </div>
+
+                    <!-- CARD CONTENT  -->
+                    <a href="#" class="mt-4 font-bold">Charlene Kim</a>    
+                </div>
+            </div>
+        </section>
+        </div>
+
+
+    </main>
+</body>
+
+</html>
