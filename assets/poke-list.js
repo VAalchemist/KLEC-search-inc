@@ -29,18 +29,20 @@ fetch (pokeListURL)
         .then(function (pokeData){
 
             var cardContainer = document.createElement("div");
-            cardContainer.setAttribute("class", "mt-4 sm:w-1/3");
+            cardContainer.setAttribute("class", "mt-4 sm:px-4 lg:px-16");
+            cardContainer.setAttribute("style", "width: 300px");
             var contentContainer = document.createElement("div");
             contentContainer.setAttribute("class" , "bg-white h-full p-8 border-b-4 border-red-900 rounded-lg flex flex-col items-center sm:mx-2 sm:p-3 md:p-8")
             var imgContainer = document.createElement("div");
             imgContainer.setAttribute("class", "bg-gray-200 text-green-700  w-16 rounded-full p-2");
+            imgContainer.setAttribute("style", "width: 100px; height:100px; text-align:center");
     
             var title = document.createElement("div");
             title.setAttribute("class", "mt-4 font-bold");
             title.textContent = pokeData.name;
             var img = document.createElement("img");
             img.setAttribute("src",pokeData.sprites.versions["generation-v"]["black-white"].animated.front_default);
-            //img.setAttribute()
+            img.setAttribute("style","height:70px");
             imgContainer.append(img);
             contentContainer.append(imgContainer);
             contentContainer.append(title);
