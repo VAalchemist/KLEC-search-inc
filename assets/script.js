@@ -5,9 +5,7 @@ var weatherDisplayEl = document.querySelector(".weather-display");
 
 var lat;
 var long;
-//change config.weatherKey to personal open weather API key to get it to work
-//var weatherAPI = config.weatherKey;
-var weatherAPI = "2f0aa3eeabaa9f5d0f299426c008697b";
+
 
 //get geo location of user
 navigator.geolocation.getCurrentPosition(function(pos){  
@@ -135,6 +133,7 @@ formEl.addEventListener('submit', function (event) {
 
         })
         .catch(function (error) {
+            
             console.log(error);
 
         })
