@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KLEC Pokedex</title>
 
+    <!-- Tailwind API -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Share+Tech+Mono&family=Stalinist+One&display=swap" rel="stylesheet">
 
     <!-- Style Sheet & CSS API-->
-    <!-- Tailwind API -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 </head>
 
 <body class="bg-gray-300 h-full flex justify-center my-16">
@@ -29,8 +31,17 @@
             <div class="border-2 w-6 h-6 border-blue-300 rounded-full"></div>
         </div>
 
-    <div class="flex justify-between items-center pt-3">
-      
+
+    <header class=" bg-red-700 px-6 py-4 rounded-t-lg shadow-2xl mt-8 ">
+        <h1 class="text-xs text-yellow-300 font-bold uppercase">KLEC-pokedex</h1>
+    
+        <div class="flex items-center pt-3">
+            <div class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">
+                <div class="border-2 w-6 h-6 border-blue-200 rounded-full"></div>
+            </div>
+    
+            <!-- NAVIGATION BAR? -->
+    
     
         <!-- NAVIGATION BAR? -->
         <nav class="flex ">
@@ -58,7 +69,6 @@
                                 <input type="text" placeholder="Search..">
                             </ul> -->
     
-            <div class="flex items-center h-full weather-display"></div>
         </div>
     </header>
     
@@ -128,4 +138,5 @@
     <script type='text/javascript' src='./assets/config.js'></script>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
