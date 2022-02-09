@@ -1,9 +1,13 @@
 body { 
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-image: url("../images/trainer page.gif");
 =======
     background-image: url("assets\images\trainer-page.gif");
 >>>>>>> 495c78f (renamed class)
+=======
+    background-image: url("../images/trainer-page.gif");
+>>>>>>> 4c00ee4 (fix background)
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
