@@ -1,17 +1,21 @@
 
 .poke-font1 {
   font-family: 'Stalinist One', cursive;
-  color: rgb(73, 156, 224);
 }
 
 .poke-font2 {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Share Tech Mono', monospace; 
   color: rgb(87, 184, 119);
 }
 
 .poke-font3 {
   font-family: 'Londrina Shadow', cursive;
 }
+
+/* .poke-color1 {
+  color: rgb(87, 184, 119);
+} */
+
 
 .delete {
   color:aquamarine;
