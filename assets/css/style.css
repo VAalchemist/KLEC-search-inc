@@ -10,3 +10,7 @@
 .poke-font3 {
   font-family: 'Londrina Shadow', cursive;
 }
+
+.delete {
+  color:aquamarine;
+  padding: 5px;
