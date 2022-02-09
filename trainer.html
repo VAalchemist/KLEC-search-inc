@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/trainer.css">
-    <title>Document</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Share+Tech+Mono&family=Stalinist+One&display=swap"
+        rel="stylesheet">
+
+    <!-- Style Sheet & CSS API-->
+    <!-- Tailwind API -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+    <link rel="stylesheet" href="assets/css/trainer.css">
+    <title>Welcome Trainer!</title>
 </head>
-<body>
-    <div class="center">
-    <h2>gotta catch'em all</h2>
-    <input class="trainer" placeholder="trainer name">
-    <button type="click" class="start">Let's go</button>
-    </div>      
-    <script src="./assets/trainer.js"></script>
+<body class="">
+    <section class="flex flex-col">
+        <div class="poke-center">
+            <h2 class="poke-font3 font-bold text-4xl my-8 mx-8">Hey! It's time to go</h2>
+            <input class="trainer w-2/3 bg-green-400 font-bold rounded-lg text-center capitalize placeholder-red-700 poke-font2" placeholder="trainer name">
+            <button type="go" class="start poke-font2 rounded-full border-2 w-8 h-8 font-bold text-gray-700 hover:text-yellow-200 uppercase">go</button>
+        </div>
+    </section>
+          
 </body>
 </html>

@@ -1,5 +1,5 @@
 body { 
-    background-image: url("../images/trainer page.gif");
+    background-image: url("../images/trainer-page.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -9,9 +9,22 @@ body {
     
 }
 
-.center {
+.poke-center {
   display: block;
   justify-content: center;
   margin-top: 10%;
   margin-left: 40%;
+}
+
+
+.poke-font1 {
+  font-family: 'Stalinist One', cursive;
+}
+
+.poke-font2 {
+  font-family: 'Share Tech Mono', monospace; 
+}
+
+.poke-font3 {
+  font-family: 'Londrina Shadow', cursive;
 }
