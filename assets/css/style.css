@@ -5,16 +5,15 @@
 
 .poke-font2 {
   font-family: 'Share Tech Mono', monospace; 
-  color: rgb(87, 184, 119);
 }
 
 .poke-font3 {
   font-family: 'Londrina Shadow', cursive;
 }
 
-/* .poke-color1 {
+.poke-color1 {
   color: rgb(87, 184, 119);
-} */
+}
 
 
 .delete {
