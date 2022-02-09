@@ -23,3 +23,16 @@ body {
   margin-top: 10%;
   margin-left: 40%;
 }
+
+
+.poke-font1 {
+  font-family: 'Stalinist One', cursive;
+}
+
+.poke-font2 {
+  font-family: 'Share Tech Mono', monospace; 
+}
+
+.poke-font3 {
+  font-family: 'Londrina Shadow', cursive;
+}
