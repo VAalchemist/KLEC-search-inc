@@ -100,11 +100,11 @@ formEl.addEventListener('submit', function (event) {
 
             else {
                 displayEl.textContent = "";
-                console.log(data);
-                console.log(data.name);
-                console.log(data.height);
-                console.log(data.weight);
-                console.log(data.sprites.front_default);
+                // console.log(data);
+                // console.log(data.name);
+                // console.log(data.height);
+                // console.log(data.weight);
+                // console.log(data.sprites.front_default);
     
                 var name = document.createElement("h2");
                 name.textContent=data.name;
