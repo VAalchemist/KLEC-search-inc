@@ -130,7 +130,6 @@ console.log(pokemonCount)
 
 
 
-
 if (storedTeam != null) {
  // changing the value of teamArr in to a string
     teamArr = JSON.parse(storedTeam);
