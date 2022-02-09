@@ -1,4 +1,12 @@
-
+body {
+  background-image: url('../images/NewpalletTown.PNG.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
 .poke-font1 {
   font-family: 'Stalinist One', cursive;
 }
@@ -16,6 +24,4 @@
 }
 
 
-.delete {
-  color:aquamarine;
-  padding: 5px;
+
