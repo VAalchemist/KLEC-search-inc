@@ -1,5 +1,9 @@
 body { 
+<<<<<<< HEAD
     background-image: url("../images/trainer page.gif");
+=======
+    background-image: url("assets\images\trainer-page.gif");
+>>>>>>> 495c78f (renamed class)
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -9,7 +13,7 @@ body {
     
 }
 
-.center {
+.poke-center {
   display: block;
   justify-content: center;
   margin-top: 10%;
