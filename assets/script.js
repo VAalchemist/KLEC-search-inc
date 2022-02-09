@@ -2,9 +2,15 @@ var searchEl = document.querySelector(".poke-name");
 var formEl = document.querySelector(".pokemon");
 var displayEl = document.querySelector(".pokemon-display");
 var weatherDisplayEl = document.querySelector(".weather-display");
+var weatherDisplayP = document.querySelector(".weather-catch");
 
 var lat;
 var long;
+var temp;
+var isDay;
+var forecast;
+var windSpeed;
+
 
 
 //get geo location of user
@@ -58,6 +64,15 @@ navigator.geolocation.getCurrentPosition(function(pos){
             weather.textContent = "The Weather in " + data.properties.relativeLocation.properties.city + " is " + weatherData.properties.periods[0].shortForecast;
             //appending the content 'p' element to the weatherDisplay element in the html
             weatherDisplayEl.append(weather);
+            temp = weatherData.properties.periods[0].temperature;
+            isDay = weatherData.properties.periods[0].isDaytime;
+            forecast = weatherData.properties.periods[0].shortForecast.toLowerCase();
+            windSpeed = weatherData.properties.periods[0].windSpeed.split(' ')[0];
+
+            
+
+
+
 
 
         }).catch(function(weatherError) {
@@ -124,6 +139,40 @@ formEl.addEventListener('submit', function (event) {
                 displayEl.append(height);
                 displayEl.append(weight);
                 displayEl.append(type);
+                if(temp >= 80 && data.types[0].type.name ==="fire"){
+                    weatherDisplayP.textContent = "This Pokemon loves the " + temp +" degree weather in your area";
+                    console.log("this can be caught in " + temp +" degree weather");
+
+                }
+
+                else if (temp <= 40 && data.types[0].type.name ==="ice"){
+                    weatherDisplayP.textContent = "This Pokemon loves the " + temp +" degree weather in your area";
+                    console.log("this can be caught in " + temp +" degree weather");
+                }
+
+                else if (!isDay && data.types[0].type.name ==="ghost"){
+                    weatherDisplayP.textContent = "This Pokemon loves the darkness in your area";
+                    console.log("this can be caught in the dark");
+                }
+                else if (parseInt(windSpeed) >=5 && data.types[0].type.name ==="dragon"){
+                    weatherDisplayP.textContent = "This Pokemon loves the " + windSpeed + " MPH winds in your area";
+                    console.log("this can be caught in the dark");
+                }
+                else if (forecast.includes("sunny") && (data.types[0].type.name ==="bug" || data.types[0].type.name ==="grass")){
+                    weatherDisplayP.textContent = "This Pokemon loves the sunshine in your area";
+                    console.log("this can be caught in the sun");
+                }
+                else if (forecast.includes("clear sk") && (data.types[0].type.name ==="normal" || data.types[0].type.name ==="electric" || data.types[0].type.name ==="poison" || data.types[0].type.name ==="ground" || data.types[0].type.name ==="fairy" || data.types[0].type.name ==="fighting" || data.types[0].type.name ==="psychic" || data.types[0].type.name ==="rock")){
+                    weatherDisplayP.textContent = "This Pokemon loves the clear skies in your area";
+                    console.log("this can be caught in the sun");
+                }
+
+                else {
+                    weatherDisplayP.textContent = "This Pokemon is not near you based on your weather";
+                    console.log("this can't be caught");
+                }
+                
+
 
 
 
