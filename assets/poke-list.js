@@ -40,7 +40,7 @@ fetch (pokeListURL)
             title.textContent = pokeData.name;
             var img = document.createElement("img");
             img.setAttribute("src",pokeData.sprites.versions["generation-v"]["black-white"].animated.front_default);
-            img.setAttribute()
+            //img.setAttribute()
             imgContainer.append(img);
             contentContainer.append(imgContainer);
             contentContainer.append(title);
