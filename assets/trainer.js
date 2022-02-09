@@ -4,6 +4,7 @@ var train = [];
 
 letsGo.addEventListener("click", function(event) {
     event.preventDefault();
+    
    
     var trainer = trainerName.value.trim();
     if (trainer.length > 10) {
@@ -21,12 +22,21 @@ letsGo.addEventListener("click", function(event) {
     } else {
         train.push(trainer);
     }
+
+    
     
     localStorage.setItem("train", JSON.stringify(train));
     location.href="index.html";
 
     }
-
+    document.querySelector(".start").addEventListener("keyup", function(event){
+        if(event.key == Enter) {
+          
+           
+        }
+    });
     
 
 });
+
+

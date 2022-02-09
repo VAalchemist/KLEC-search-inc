@@ -224,7 +224,10 @@ addB.addEventListener('click', function (event) {
         exceedsLimit = true;
         console.log("limit exceeded")
         return 0
-    } else {
+    } 
+
+    
+    else {
         
         var name = document.querySelector("h2")
         var teamImg = document.querySelector("img").src;
