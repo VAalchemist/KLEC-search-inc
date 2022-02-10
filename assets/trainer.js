@@ -1,8 +1,8 @@
-var letsGo = document.querySelector(".start");
+var formEl = document.querySelector(".pokename");
 var trainerName = document.querySelector(".trainer");
 var train = [];
 
-letsGo.addEventListener("click", function(event) {
+formEl.addEventListener("submit", function(event) {
     event.preventDefault();
     
    
