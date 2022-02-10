@@ -33,6 +33,12 @@ THEN my trainer name and the selected pokemon on my team persist
 
 
 > Here's a small preview
+
+
+
 ![pokedex mock-up](https://raw.githubusercontent.com/VAalchemist/KLEC-search-inc/main/assets/images/pokedex%20stand%20in.jpg)
+![pokedex mock-up](https://raw.githubusercontent.com/VAalchemist/KLEC-search-inc/main/assets/images/pokedex%20stand%20in.jpg)
+![pokedex mock-up](https://raw.githubusercontent.com/VAalchemist/KLEC-search-inc/main/assets/images/pokedex%20stand%20in.jpg)
+
 
  `Begin your journey` [here!](https://vaalchemist.github.io/KLEC-search-inc/)
