@@ -70,11 +70,6 @@ navigator.geolocation.getCurrentPosition(function(pos){
             windSpeed = weatherData.properties.periods[0].windSpeed.split(' ')[0];
 
             
-
-
-
-
-
         }).catch(function(weatherError) {
             console.log(weatherError);
         });
@@ -82,14 +77,6 @@ navigator.geolocation.getCurrentPosition(function(pos){
     });
 
 });
-
-
-//api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-
-
-
-
-
 
 formEl.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -116,11 +103,6 @@ formEl.addEventListener('submit', function (event) {
 
             else {
                 displayEl.textContent = "";
-                // console.log(data);
-                // console.log(data.name);
-                // console.log(data.height);
-                // console.log(data.weight);
-                // console.log(data.sprites.front_default);
     
                 var name = document.createElement("h2");
                 name.textContent=data.name;
@@ -267,7 +249,7 @@ addB.addEventListener('click', function (event) {
    // else error message
     var teamLimit = 6;
     var exceedsLimit = false;
-    console.log(pokemonCount >= teamLimit);
+    console.log(pokemonCount);
     if (pokemonCount >= teamLimit){
         exceedsLimit = true;
         console.log("limit exceeded")
@@ -281,6 +263,7 @@ addB.addEventListener('click', function (event) {
         var teamImg = document.querySelector("img").src;
     
         teamArr.push([name.textContent, teamImg]);
+        pokemonCount++;
     
         updateTeam()
     }
@@ -290,28 +273,3 @@ addB.addEventListener('click', function (event) {
 //retrieve trainername from local storage and print on screen
 var trainer = JSON.parse(localStorage.getItem('train'));
 document.querySelector('.trainerName').innerHTML = trainer + "'s " + "pokedex";
-// This is a way to get an array of objects of the first 151 pokemon with their name and their type
-// var pokemonArr = [];
-// for (var i = 1; i <=151;i++){
-
-//     var requesArrtUrl = 'https://pokeapi.co/api/v2/pokemon/' + i;
-
-//     fetch(requesArrtUrl)
-//     .then(function(response){
-//         return response.json();
-
-//     }).then(function(data) {
-        
-//         console.log(data.name);
-//         console.log(data.types[0].type.name);
-//         var poketype = {name:data.name,type:data.types[0].type.name};
-//         pokemonArr.push(poketype);
-    
-//     }).catch(function(error){
-//         console.log(error);
-//     });
-    
-
-// }
-// console.log(pokemonArr);
-
