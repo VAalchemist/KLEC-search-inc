@@ -6,6 +6,8 @@ var weatherDisplayP = document.querySelector(".weather-catch");
 
 var lat;
 var long;
+
+
 var temp;
 var isDay;
 var forecast;
@@ -121,6 +123,8 @@ formEl.addEventListener('submit', function (event) {
                 displayEl.append(height);
                 displayEl.append(weight);
                 displayEl.append(type);
+
+
                 if(temp >= 80 && data.types[0].type.name ==="fire"){
                     weatherDisplayP.textContent = "This Pokemon loves the " + temp +" degree weather in your area";
                     console.log("this can be caught in " + temp +" degree weather");
@@ -154,10 +158,6 @@ formEl.addEventListener('submit', function (event) {
                     console.log("this can't be caught");
                 }
                 
-
-
-
-
             }
 
 
