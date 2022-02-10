@@ -29,14 +29,24 @@ letsGo.addEventListener("click", function(event) {
     location.href="index.html";
 
     }
-    document.querySelector(".start").addEventListener("keyup", function(event){
-        if(event.key == Enter) {
-          
-           
-        }
-    });
     
+   
+
 
 });
+var letsStart = document.querySelector(".start");
+letsStart.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.querySelector(".start").click();
+    }
+});
+// document.querySelector(".start").addEventListener("keyup", function(event){
+//     if(event.key == "Enter") {
+//         event.preventDefault
+//         console.log(event.key);
+      
+       
+//     }
 
-
+// });
