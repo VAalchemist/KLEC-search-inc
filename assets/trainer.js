@@ -26,7 +26,7 @@ formEl.addEventListener("submit", function(event) {
     
     
     localStorage.setItem("train", JSON.stringify(train));
-    location.href="index.html";
+    location.href="pokedex.html";
 
     }
     
@@ -34,13 +34,7 @@ formEl.addEventListener("submit", function(event) {
 
 
 });
-var letsStart = document.querySelector(".start");
-letsStart.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.querySelector(".start").click();
-    }
-});
+
 // document.querySelector(".start").addEventListener("keyup", function(event){
 //     if(event.key == "Enter") {
 //         event.preventDefault
