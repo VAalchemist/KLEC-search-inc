@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,17 +16,28 @@
     <!-- Style Sheet & CSS API-->
     <!-- Tailwind API -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
-    <link rel="stylesheet" href="assets/css/trainer.css">
+    <link rel="stylesheet" href="trainer.css">
     <title>Welcome Trainer!</title>
 </head>
-<body class="">
-    <section class="flex flex-col">
-        <form class="poke-center pokename">
-            <h2 class="poke-font3 font-bold text-4xl my-8 mx-8">Gotta catch em all!</h2>
-            <input class="trainer w-2/3 bg-green-400 font-bold rounded-lg text-center capitalize placeholder-red-700 poke-font2" placeholder="trainer name">
-            <button type="click" class="start poke-font2 rounded-full border-2 w-8 h-8 font-bold text-gray-700 hover:text-yellow-200 uppercase">go</button>
+
+<body class="bg-fixed bg-no-repeat bg-cover bg-center flex justify-center"
+    style="background-image: url(assets/images/trainer-page.gif);">
+
+    <main class=" flex flex-col">
+        <h1 class="flex justify-center poke-font3 font-bold text-red-900 lg:text-4xl text-2xl mt-36">Gotta catch em all!
+        </h1>
+        <form class="pokename flex justify-center w-full max-w-sm border-b border-green-400">
+            <input
+                class="trainer appearance-none bg-transparent border-none w-full mt-8 text-yellow-200 text-sm poke-font2 capitalize focus:outline-none placeholder-yellow-500 "
+                type="text" placeholder="trainer's name">
+
+            <button type="submit"
+                class="poke-font2 w-8 h-8 mt-4 flex-shrink-0 border-2 rounded-full font-bold text-gray-700 hover:text-yellow-200 uppercase">go</button>
+
         </form>
-    </section>
+    </main>
+    <!-- PUT OUR JQUERY/AJAX API PATH HERE -->
     <script src="assets/script/trainer.js"></script>
 </body>
+
 </html>
