@@ -29,18 +29,4 @@ formEl.addEventListener("submit", function(event) {
     location.href="pokedex.html";
 
     }
-    
-   
-
-
 });
-
-// document.querySelector(".start").addEventListener("keyup", function(event){
-//     if(event.key == "Enter") {
-//         event.preventDefault
-//         console.log(event.key);
-      
-       
-//     }
-
-// });
