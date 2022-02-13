@@ -22,7 +22,7 @@
 <body class=" bg-fixed bg-no-repeat bg-center bg-black h-screen flex justify-center items-center"
     style="background-image: url(assets/images/newPalletTown.PNG)">
 
-    <div class="flex flex-col items-center h-4/5 md:w-2/3 mt-16 mx-3 border-t-4 border-b-4 border-red-900 bg-red-700 rounded-t-lg rounded-b-lg shadow-t-2xl">
+    <div class="flex flex-col  items-center  md:w-2/3 md:h-4/5 m-auto border-t-4 border-b-4 border-red-900 bg-red-700 rounded-t-lg rounded-b-lg shadow-t-2xl">
         <!-- GET RID OF GRAY BORDERS -->
         <header class="border md:w-11/12">
 
@@ -60,19 +60,22 @@
         </header>
 
 
-        <main class="border-4 m-2 md:w-11/12 poke-font2 flex flex-col">
+        <main class="border-4 m-2 md:w-11/12 poke-font2 overflow-auto flex flex-col">
         
             <!-- main monitor display -->
             <section class="border-8 bg-gray-800 rounded-lg m-2 flex flex-col items-center p-16 text-green-400 capitalize">
         
                 <!-- name display -->
-                <div class="border m-2">name</div>
+                <div class="trainerName border m-2 font-bold text-xl">name</div>
         
                 <!-- pokemon display -->
-                <div class="border m-2">pokemon</div>
+                <div class="border m-2">pokemon
+                    <div class="p-6 pokemon-display capitalize"></div>
+                    <div class="weather-catch"></div>
+                </div>
         
                 <!-- weather display -->
-                <div class="border m-2">weather</div>
+                <div class="weather-display border m-2">weather</div>
         
             </section>
         
