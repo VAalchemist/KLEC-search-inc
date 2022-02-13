@@ -22,12 +22,13 @@
 <body class=" bg-fixed bg-no-repeat bg-center bg-black h-screen flex justify-center items-center"
     style="background-image: url(assets/images/newPalletTown.PNG)">
 
-    <div class="flex justify-center md:w-2/3 mt-16 mx-3 border-t-4 border-red-900 bg-red-700 rounded-t-lg shadow-t-2xl">
-        <header class="">
+    <div class="flex flex-col items-center h-4/5 md:w-2/3 mt-16 mx-3 border-t-4 border-b-4 border-red-900 bg-red-700 rounded-t-lg rounded-b-lg shadow-t-2xl">
+        <!-- GET RID OF GRAY BORDERS -->
+        <header class="border md:w-11/12">
 
             <!-- trademark and audio player -->
-            <!-- GET RID OF GRAY BORDERS -->
-            <div class=" max-w-md m-2 flex justify-between">
+          
+            <div class="m-2 flex justify-between">
                 <h1 class="ml-4 mt-3 poke-font3 font-medium text-xs text-gray-400 uppercase">klec-dex</h1>
 
                 <audio controls id="player" class="p-2" id="myAudio">
@@ -38,7 +39,7 @@
             </div>
 
 
-            <section class="max-w-md m-2 flex items-center">
+            <section class="m-2 flex justify-between items-center">
                 <div
                     class="border-2 border-gray-400 ml-3 mr-12 w-12 h-12 flex justify-center items-center rounded-full bg-blue-700 shadow-2xl">
                     <div class="border-4 w-8 h-8 border-blue-400 rounded-full"></div>
@@ -57,6 +58,38 @@
                 </nav>
             </section>
         </header>
+
+
+        <main class="border-4 m-2 md:w-11/12 poke-font2">main
+        
+            <!-- main monitor display -->
+            <section class="border m-2"> monitor
+        
+                <!-- name display -->
+                <div class="border m-2">name</div>
+        
+                <!-- pokemon display -->
+                <div class="border m-2">pokemon</div>
+        
+                <!-- weather display -->
+                <div class="border m-2">weather</div>
+        
+            </section>
+        
+            <!-- search bar add button -->
+            <form class="border m-2 ">search
+        
+                <!-- <input class=""> -->
+                <!-- <button class=""></button> -->
+        
+            </form>
+        
+            <!-- team list modal? -->
+            <section class="border m-2">team</section>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer class="border-4 md:w-11/12 poke-font3 font-medium text-gray-400 text-xs capitalize">footer</footer>
     </div>
 
 
