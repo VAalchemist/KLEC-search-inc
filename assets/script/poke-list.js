@@ -65,10 +65,7 @@ fetch (pokeListURL)
 
         })
 
-        
-
-
-
+    
 
     }
 
