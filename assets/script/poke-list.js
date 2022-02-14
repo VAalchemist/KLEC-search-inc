@@ -1,5 +1,12 @@
 var pokeListEl = document.querySelector(".poke-list");
 var pokeMap = new Map();
+const back2top = document.querySelector('#back2top');
+
+
+back2top.addEventListener('click', (top) => {
+    top.preventDefault(); 
+    window.scroll({ top: 0, left:0, behavior:'smooth'})
+});
 
 var pokeListURL = "https://pokeapi.co/api/v2/pokemon/?limit=151";
 fetch (pokeListURL)
