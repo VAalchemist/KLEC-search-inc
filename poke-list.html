@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="bg-fixed bg-no-repeat bg-center bg-black h-screen flex justify-center items-center"
+<body class="bg-fixed bg-no-repeat bg-center bg-black h-full flex justify-center items-center"
     style="background-image: url(assets/images/newPalletTown.PNG)">
 
     <div
@@ -61,27 +61,28 @@
             </section>
         </header>
 
-        <main class="border-4 flex flex-col items-center">
-            <!-- under construction notice -->
-            <section class="border w-48 m-4 flex flex-col justify-center items-center">
-                <!-- POKEMON IMAGE -->
-                <div class="w-11 md:w-24 md:h-24 bg-gray-200 rounded-full">
-                    <img src="assets/images/construction2.gif">
-                </div>
-            
-                <!-- CARD CONTENT  -->
-                <p class="poke-font2 mt-1 mt-4 font-bold text-yellow-500 uppercase text-xs text-center md:text-base">list
+        <!-- under construction notice -->
+        <section class="w-48 m-4 flex flex-col  justify-center items-center">
+            <!-- POKEMON IMAGE -->
+            <div class="w-11 md:w-24 md:h-24 bg-gray-200 rounded-full">
+                <img src="assets/images/construction2.gif">
+            </div>
+        
+            <!-- CARD CONTENT  -->
+            <p class="poke-font2 mt-1 mt-4 font-bold text-yellow-500 uppercase text-xs text-center md:text-base">list
                 is for display purposes only for the moment. content interactivity coming soon!</p>
-            </section>
+        </section>
 
-            <!-- list -->
-            <section class="border-4 m-1 poke-list flex flex-col items-center">LIST
+        <main class="border-4 flex flex-col items-center">
+
+          <!-- list -->
+            <section class="poke-font2 border-4 m-1 poke-list flex flex-col items-center">LIST
                 <div class="border-2 m-1">
                     <div class="border m-1">image</div>
                     <div class="border m-1">content</div>
-
-
                 </div>
+
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
 
 
