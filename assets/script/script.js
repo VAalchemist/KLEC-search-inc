@@ -181,12 +181,6 @@ if (JSON.parse(localStorage.getItem("team")) === null) {
     var pokemonCount = JSON.parse(localStorage.getItem("team")).length;
 } 
 console.log(pokemonCount);
-// // console.log("your team is " + pokemonCount);
-
-// if(pokemonCount.length >=6){
-//     this.setState({isFull: true});
-// } 
-
 
 
 
